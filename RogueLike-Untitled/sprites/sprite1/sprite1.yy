@@ -82,8 +82,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "RogueLike-Untitled",
-    "path": "RogueLike-Untitled.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],
