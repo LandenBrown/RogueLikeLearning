@@ -1,11 +1,12 @@
 {
   "resources": [
+    {"id":{"name":"MonsterHealthBox","path":"objects/MonsterHealthBox/MonsterHealthBox.yy",},"order":7,},
     {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":5,},
     {"id":{"name":"Object3","path":"objects/Object3/Object3.yy",},"order":2,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},"order":0,},
     {"id":{"name":"Projectile_Object","path":"objects/Projectile_Object/Projectile_Object.yy",},"order":6,},
-    {"id":{"name":"obj_healthbox","path":"objects/obj_healthbox/obj_healthbox.yy",},"order":4,},
+    {"id":{"name":"PlayerHealthBox","path":"objects/PlayerHealthBox/PlayerHealthBox.yy",},"order":4,},
     {"id":{"name":"HealthBoxBar","path":"sprites/HealthBoxBar/HealthBoxBar.yy",},"order":3,},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":2,},
     {"id":{"name":"Taking_Damage_Sprite","path":"sprites/Taking_Damage_Sprite/Taking_Damage_Sprite.yy",},"order":4,},
