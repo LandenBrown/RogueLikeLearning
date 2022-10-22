@@ -4,5 +4,7 @@ global.Player_Max_Heatlh = 100;
 
 global.Taking_Damage = false; 
 
+firingdelay = 0;
+
 
 
