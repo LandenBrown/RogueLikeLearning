@@ -1,9 +1,6 @@
 {
   "name": "PlayerHealthBox",
-  "spriteId": {
-    "name": "HealthBoxBar",
-    "path": "sprites/HealthBoxBar/HealthBoxBar.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
   "solid": false,
@@ -24,7 +21,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

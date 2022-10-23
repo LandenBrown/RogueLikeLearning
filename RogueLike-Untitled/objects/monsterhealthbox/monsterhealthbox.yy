@@ -1,8 +1,8 @@
 {
   "name": "MonsterHealthBox",
   "spriteId": {
-    "name": "HealthBoxBar",
-    "path": "sprites/HealthBoxBar/HealthBoxBar.yy",
+    "name": "Sprite7",
+    "path": "sprites/Sprite7/Sprite7.yy",
   },
   "spriteMaskId": null,
   "visible": true,

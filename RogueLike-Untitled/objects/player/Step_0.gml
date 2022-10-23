@@ -27,7 +27,8 @@ if (mouse_check_button_pressed(mb_left)) && (firingdelay < 0){
 
 
 if global.Player_Health <= 0{
-	game_end();
+	instance_destroy();
+	//game_end();
 };
 
 

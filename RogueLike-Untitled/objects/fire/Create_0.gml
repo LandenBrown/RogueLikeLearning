@@ -4,3 +4,7 @@
 monsterHealth = 5;
 monsterMaxHealth = 5;
 monsterSpeed = 1;
+
+monsterid = id;
+
+damage_delay = 5;
