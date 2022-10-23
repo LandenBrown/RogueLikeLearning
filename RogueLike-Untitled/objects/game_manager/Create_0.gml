@@ -50,20 +50,21 @@ instance_create_depth(random_xp, random_yp, 0, Player);
 function calculate_difficulty() {
 
 	if global.attacks_count <= 14{
-		global.difficulty_modifier = 1.3;
+		global.difficulty_modifier = 1.6;
 	}
 	else if global.attacks_count <= 30 {
-		global.difficulty_modifier = 1.2;
+		global.difficulty_modifier = 1.5;
 	}
 	else if global.attacks_count <= 75 {
-		global.difficulty_modifier = 1.1;
+		global.difficulty_modifier = 1.4;
 	}
 	global.attacks_count = 0;
 	
 }
 function check_remaining_monsters() {
-	calculate_difficulty();
+	
 	if global.monsters_left <= 0 {
+		calculate_difficulty();
 		//global.difficulty_modifier += .5;
 		global.total_enemies = round((global.total_enemies*global.difficulty_modifier));
 		global.spawn_monster_count = global.total_enemies;
