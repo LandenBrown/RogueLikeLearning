@@ -15,6 +15,7 @@ if file_exists("saved.save"){
 	ini_open("saved.save");
 	global.SilverCoins = int64(ini_read_string("Player Variables", "Silver", 0));
 	global.GoldCoins = int64(ini_read_string("Player Variables", "Gold", 0));
+	global.maxStage = int64(ini_read_string("Player Variables", "Max Stage", 1));
 	ini_close();
 }
 
@@ -69,7 +70,10 @@ function check_remaining_monsters() {
 		global.monsters_left = global.spawn_monster_count;
 		global.monsters_left = int64(global.monsters_left);
 		global.currentStage += 1;
-		global.maxStage = global.currentStage;
+		if global.currentStage > global.maxStage {
+			global.maxStage = global.currentStage;
+		}
+		
 	}
 }
 
