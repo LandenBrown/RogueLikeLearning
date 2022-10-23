@@ -7,7 +7,7 @@
   "spriteMaskId": null,
   "visible": true,
   "solid": false,
-  "persistent": false,
+  "persistent": true,
   "physicsObject": false,
   "managed": true,
   "parentObjectId": null,

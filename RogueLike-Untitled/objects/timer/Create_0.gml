@@ -2,8 +2,5 @@
 // You can write your code in this editor
 
 
-if damage_delay < 0{
-	monsterHealth -= 1;
-	damage_delay = 5;
-}
-
+room_speed = 60;
+global.seconds = 0;

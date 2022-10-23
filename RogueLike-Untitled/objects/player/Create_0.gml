@@ -6,5 +6,10 @@ global.Taking_Damage = false;
 
 firingdelay = 0;
 
+global.PlayerX = "";
+global.PlayerX = "";
+
+global.attacks_count = 0;
 
 
+currentWeapon = "tri-bullet";
