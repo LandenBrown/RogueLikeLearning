@@ -7,8 +7,15 @@ global.monsters_left = global.spawn_monster_count;
 global.difficulty_modifier = 1;
 global.currentStage = 1;
 global.maxStage = 1;
+global.monster_limit = 15;
+
+global.spawnable_Monster_Array = [Fire, MonkeyObject];
 //Weapon Damages
 global.Bullet_Damage = 1;
+
+
+//Enemy Projectile Damage
+global.Rock_Damage = 5;
 global.SilverCoins = 0;
 global.GoldCoins = 0;
 if file_exists("saved.save"){
@@ -79,10 +86,15 @@ function check_remaining_monsters() {
 }
 
 function check_spawn_monsters() {
-	if global.spawn_monster_count > 0{
+	while global.spawn_monster_count > 0{
+		randomise();
+		MaxMonsterInArray = (array_length(global.spawnable_Monster_Array) - 1);
+		show_debug_message(MaxMonsterInArray);
+		randommonster = int64(irandom_range(0, MaxMonsterInArray));
+		show_debug_message("Random Monster is: " + string(randommonster));
 		random_x = random_range(0, room_width);
 		random_y = random_range(0, room_height);
-		instance_create_depth(random_x, random_y, 0, Fire);
+		instance_create_depth(random_x, random_y, 0, global.spawnable_Monster_Array[randommonster]);
 		global.spawn_monster_count -= 1;
 		
 	}

@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Fire",
+  "name": "MonkeyObject",
   "spriteId": {
-    "name": "OrangeBlock",
-    "path": "sprites/OrangeBlock/OrangeBlock.yy",
+    "name": "Monkey",
+    "path": "sprites/Monkey/Monkey.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Orange Block",
-    "path": "folders/Objects/Enemies/Orange Block.yy",
+    "name": "Monkey",
+    "path": "folders/Objects/Enemies/Monkey.yy",
   },
 }
