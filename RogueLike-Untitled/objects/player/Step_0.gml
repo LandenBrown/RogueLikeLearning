@@ -11,7 +11,7 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 
 firingdelay = firingdelay -1;
 
-if (mouse_check_button_pressed(mb_left)) && (firingdelay < 0){
+if (mouse_check_button(mb_left)) && (firingdelay < 0){
 	firingdelay = 5;
 	//Applies to object not player
 	global.attacks_count += 1;
