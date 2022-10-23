@@ -1,7 +1,9 @@
 {
   "resources": [
     {"id":{"name":"Timer","path":"objects/Timer/Timer.yy",},"order":12,},
+    {"id":{"name":"StageNumberObject","path":"objects/StageNumberObject/StageNumberObject.yy",},"order":6,},
     {"id":{"name":"SilverCoinNumber","path":"objects/SilverCoinNumber/SilverCoinNumber.yy",},"order":3,},
+    {"id":{"name":"StageNumberSprite","path":"sprites/StageNumberSprite/StageNumberSprite.yy",},"order":3,},
     {"id":{"name":"GoldCoinSprite","path":"sprites/GoldCoinSprite/GoldCoinSprite.yy",},"order":2,},
     {"id":{"name":"GoldCoinNumber","path":"objects/GoldCoinNumber/GoldCoinNumber.yy",},"order":5,},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},"order":1,},
@@ -9,6 +11,7 @@
     {"id":{"name":"BulletSprite","path":"sprites/BulletSprite/BulletSprite.yy",},"order":0,},
     {"id":{"name":"Bullet_Upgrade","path":"objects/Bullet_Upgrade/Bullet_Upgrade.yy",},"order":0,},
     {"id":{"name":"Bullet_Upgrade_Sprite","path":"sprites/Bullet_Upgrade_Sprite/Bullet_Upgrade_Sprite.yy",},"order":0,},
+    {"id":{"name":"StageNumberCounterObject","path":"objects/StageNumberCounterObject/StageNumberCounterObject.yy",},"order":7,},
     {"id":{"name":"SilverCoinSprite","path":"sprites/SilverCoinSprite/SilverCoinSprite.yy",},"order":1,},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},"order":0,},
     {"id":{"name":"SilverCoinDisplay","path":"objects/SilverCoinDisplay/SilverCoinDisplay.yy",},"order":2,},

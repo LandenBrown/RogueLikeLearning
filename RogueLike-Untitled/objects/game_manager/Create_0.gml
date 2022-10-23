@@ -5,6 +5,8 @@ global.total_enemies = 3;
 global.spawn_monster_count = global.total_enemies;
 global.monsters_left = global.spawn_monster_count;
 global.difficulty_modifier = 1;
+global.currentStage = 1;
+global.maxStage = 1;
 //Weapon Damages
 global.Bullet_Damage = 1;
 global.SilverCoins = 0;
@@ -66,6 +68,8 @@ function check_remaining_monsters() {
 		global.spawn_monster_count = global.total_enemies;
 		global.monsters_left = global.spawn_monster_count;
 		global.monsters_left = int64(global.monsters_left);
+		global.currentStage += 1;
+		global.maxStage = global.currentStage;
 	}
 }
 
@@ -75,6 +79,7 @@ function check_spawn_monsters() {
 		random_y = random_range(0, room_height);
 		instance_create_depth(random_x, random_y, 0, Fire);
 		global.spawn_monster_count -= 1;
+		
 	}
 }
 
