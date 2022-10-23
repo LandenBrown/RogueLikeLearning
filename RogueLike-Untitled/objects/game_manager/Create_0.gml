@@ -9,15 +9,37 @@ global.currentStage = 1;
 global.maxStage = 1;
 global.monster_limit = 15;
 
+
+//Room Management
+nextRoom = Room1;
+global.currentRoom = Room1;
+global.unique_Rooms_Array = [Room1, UniqueRoom];
+
+//Room Enemies
 global.spawnable_Monster_Array = [Fire, MonkeyObject];
+global.Unique_Room_Monster_Array = [MonkeyObject];
+global.Boss_Room_Monster_Array = [BossRoomBoss_Ojbect];
+
 //Weapon Damages
 global.Bullet_Damage = 1;
 
 
+//Spawn monsters or no
+global.needsSpawn = false;
+
+
+
+
 //Enemy Projectile Damage
-global.Rock_Damage = 5;
+global.Rock_Damage = 3;
 global.SilverCoins = 0;
 global.GoldCoins = 0;
+
+
+//Room Setup
+global.currentMonsterArray = global.spawnable_Monster_Array;
+
+
 if file_exists("saved.save"){
 	ini_open("saved.save");
 	global.SilverCoins = int64(ini_read_string("Player Variables", "Silver", 0));
@@ -50,6 +72,32 @@ instance_create_depth(random_xp, random_yp, 0, Player);
 //}
 
 
+function check_Room(_roomArray){
+	uniquechance = int64(irandom_range(1, 3));
+		if uniquechance = 1{
+			room_array_size = int64(array_length(_roomArray) - 1);
+			pickrandomroom = int64(irandom_range(0, room_array_size));
+			show_debug_message("Random Room is: " + string(pickrandomroom));
+			nextRoom = _roomArray[pickrandomroom];
+			if nextRoom == UniqueRoom{
+				global.currentMonsterArray = global.Unique_Room_Monster_Array;
+				show_debug_message("Just went to unique Room");
+				return UniqueRoom;
+				
+			}
+			else if nextRoom == Room1{
+				global.currentMonsterArray = global.spawnable_Monster_Array;
+				show_debug_message("Just went to unique Room");
+				return Room1;
+			}
+			else if nextRoom == BossRoom{
+				global.currentMonsterArray = global.Boss_Room_Monster_Array;
+				show_debug_message("Just went to unique Room");
+				return BossRoom;
+			}
+		}	
+}
+
 
 
 
@@ -71,13 +119,14 @@ function calculate_difficulty() {
 function check_remaining_monsters() {
 	
 	if global.monsters_left <= 0 {
+		global.needsSpawn = true;
 		calculate_difficulty();
-		//global.difficulty_modifier += .5;
 		global.total_enemies = round((global.total_enemies*global.difficulty_modifier));
 		global.spawn_monster_count = global.total_enemies;
+		global.currentStage += 1;
 		global.monsters_left = global.spawn_monster_count;
 		global.monsters_left = int64(global.monsters_left);
-		global.currentStage += 1;
+		show_debug_message("Current Stage Complete!");
 		if global.currentStage > global.maxStage {
 			global.maxStage = global.currentStage;
 		}
@@ -86,17 +135,36 @@ function check_remaining_monsters() {
 }
 
 function check_spawn_monsters() {
-	while global.spawn_monster_count > 0{
-		randomise();
-		MaxMonsterInArray = (array_length(global.spawnable_Monster_Array) - 1);
-		show_debug_message(MaxMonsterInArray);
-		randommonster = int64(irandom_range(0, MaxMonsterInArray));
-		show_debug_message("Random Monster is: " + string(randommonster));
-		random_x = random_range(0, room_width);
-		random_y = random_range(0, room_height);
-		instance_create_depth(random_x, random_y, 0, global.spawnable_Monster_Array[randommonster]);
-		global.spawn_monster_count -= 1;
+	if global.spawn_monster_count > 0{
+		if global.needsSpawn {
+			nextRoom = check_Room(global.unique_Rooms_Array);
+			room_goto(nextRoom);
+			global.needsSpawn = false;
+			show_debug_message("Just changed my goddam room")
+		}
 		
+		show_debug_message("MY CURRENT ROOM IS: " + string(room));
+		//check_Room(global.unique_Rooms_Array);
+		show_debug_message("Current Monster array is " + string(global.currentMonsterArray));
+		MaxMonsterInArray = int64(array_length(global.currentMonsterArray)-1);
+		show_debug_message("Current Monster array length is " + string(MaxMonsterInArray));
+		//room_array_size = int64(array_length(_roomArray) - 1);
+		while global.spawn_monster_count > 0 {
+			show_debug_message("Entering While loop while monster count is " + string(global.spawn_monster_count));
+			randomise();
+			//Declare temporary variable for whatever current monster array to spawn/pull from
+			//Set what room we are i
+			//spawn enemies
+			show_debug_message(MaxMonsterInArray);
+			randommonster = int64(irandom_range(0, MaxMonsterInArray));
+			show_debug_message("Random Monster is: " + string(randommonster));
+			random_x = random_range(0, room_width);
+			random_y = random_range(0, room_height);
+			instance_create_depth(random_x, random_y, 0, global.currentMonsterArray[randommonster]);
+			global.spawn_monster_count -= 1;
+			show_debug_message("Spawned one Monster!")
+		}
+		show_debug_message("Just left while loop, all monsters spawned");
 	}
 }
 

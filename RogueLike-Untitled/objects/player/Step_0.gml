@@ -19,7 +19,7 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0){
 	//Applies to object not player
 	global.attacks_count += 1;
 	if currentWeapon == "bullet"{
-		with(instance_create_layer(x,y, "BulletLayer", Bullet_Object))
+		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;
 			direction = other.image_angle;
@@ -27,19 +27,19 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0){
 		};
 	};
 	if currentWeapon == "tri-bullet"{
-		with(instance_create_layer(x,y, "BulletLayer", Bullet_Object))
+		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;
 			direction = other.image_angle;
 			image_angle = direction;
 		};
-		with(instance_create_layer(x,y, "BulletLayer", Bullet_Object))
+		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;
 			direction = other.image_angle+15;
 			image_angle = direction+15;
 		};
-		with(instance_create_layer(x,y, "BulletLayer", Bullet_Object))
+		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;
 			direction = other.image_angle-15;
@@ -60,6 +60,6 @@ if global.Player_Health <= 0{
 
 if global.Taking_Damage == true {
 	
-	instance_create_depth(x, y, 100, Taking_Damage_Object);
+	instance_create_depth(x, y, 0, Taking_Damage_Object);
 	global.Taking_Damage = false;
 }

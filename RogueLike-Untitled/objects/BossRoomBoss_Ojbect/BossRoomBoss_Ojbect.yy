@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "MonkeyRockObject",
+  "name": "BossRoomBoss_Ojbect",
   "spriteId": {
-    "name": "MonkeyRockSprite",
-    "path": "sprites/MonkeyRockSprite/MonkeyRockSprite.yy",
+    "name": "BossRoom_Boss_Sprite",
+    "path": "sprites/BossRoom_Boss_Sprite/BossRoom_Boss_Sprite.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,15 +25,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":77,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Bullet_Object","path":"objects/Bullet_Object/Bullet_Object.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Objects/Projectiles.yy",
+    "name": "BossRoom",
+    "path": "folders/Objects/Enemies/Bosses/BossRoom.yy",
   },
 }
