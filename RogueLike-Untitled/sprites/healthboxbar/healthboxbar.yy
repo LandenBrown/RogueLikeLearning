@@ -70,8 +70,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "GameUI",
+    "path": "folders/Sprites/GameUI.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],

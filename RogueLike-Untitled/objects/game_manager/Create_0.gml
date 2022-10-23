@@ -1,12 +1,46 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//Initial Difficulties
+global.total_enemies = 3;
+global.spawn_monster_count = global.total_enemies;
+global.monsters_left = global.spawn_monster_count;
+global.difficulty_modifier = 1;
 //Weapon Damages
 global.Bullet_Damage = 1;
+global.SilverCoins = 0;
+global.GoldCoins = 0;
+if file_exists("saved.save"){
+	ini_open("saved.save");
+	global.SilverCoins = int64(ini_read_string("Player Variables", "Silver", 0));
+	global.GoldCoins = int64(ini_read_string("Player Variables", "Gold", 0));
+	ini_close();
+}
 
+
+//Player Attributes
 random_xp = random_range(0, room_width);
 random_yp = random_range(0, room_height);
-player = instance_create_depth(random_xp, random_yp, 0, Player);
+instance_create_depth(random_xp, random_yp, 0, Player);
+
+//Load
+
+//if (file_exists("savedgame.save"))
+//{
+//	var _buffer = buffer_load("savedgame.save");
+//	var _string = buffer_read( _buffer, buffer_string);
+//	buffer_delete(_buffer);
+//	var _loadData = json_parse(_string);
+//	//show_debug_message(str(_loadData[0]))
+	
+//	//show_debug_message(str(array_length(_loadData)));
+//	// Load actual values
+//	global.SilverCoins = int64(_loadData[0]);
+//	global.GoldCoins = int64(_loadData[1])
+	
+//}
+
+
+
 
 
 
@@ -43,6 +77,8 @@ function check_spawn_monsters() {
 		global.spawn_monster_count -= 1;
 	}
 }
+
+
 
 
 

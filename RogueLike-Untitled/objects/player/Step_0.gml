@@ -48,8 +48,10 @@ if (mouse_check_button_pressed(mb_left)) && (firingdelay < 0){
 
 
 if global.Player_Health <= 0{
+	SaveGame();
 	instance_destroy();
 	//game_end();
+	game_restart()
 };
 
 

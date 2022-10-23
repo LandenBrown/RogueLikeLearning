@@ -98,8 +98,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Upgrades",
+    "path": "folders/Sprites/Upgrades.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],

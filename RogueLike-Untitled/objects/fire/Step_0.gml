@@ -19,8 +19,11 @@ if monsterHealth <= 0 {
 	if chance <= 10{
 		instance_create_depth(x, y, 0, Bullet_Upgrade);
 	}
+	instance_create_depth(x, y, 0, obj_OrangeBlock_Dead);
 	instance_destroy();
 	global.monsters_left -= 1;
+	global.SilverCoins += 1;
+	
 
 }
 

@@ -6,10 +6,17 @@ global.Taking_Damage = false;
 
 firingdelay = 0;
 
-global.PlayerX = "";
-global.PlayerX = "";
-
 global.attacks_count = 0;
 
 
 currentWeapon = "tri-bullet";
+
+
+function SaveGame() {
+	
+	ini_open("saved.save");
+	ini_write_real("Player Variables", "Silver", int64(global.SilverCoins));
+	ini_write_real("Player Variables", "Gold", int64(global.GoldCoins));
+	ini_close();
+
+};

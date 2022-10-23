@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Engine",
+    "path": "folders/Objects/Engine.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],

@@ -1,8 +1,8 @@
 {
   "name": "Fire",
   "spriteId": {
-    "name": "Sprite1",
-    "path": "sprites/Sprite1/Sprite1.yy",
+    "name": "OrangeBlock",
+    "path": "sprites/OrangeBlock/OrangeBlock.yy",
   },
   "spriteMaskId": null,
   "visible": true,
@@ -26,12 +26,13 @@
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Bullet_Object","path":"objects/Bullet_Object/Bullet_Object.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Orange Block",
+    "path": "folders/Objects/Enemies/Orange Block.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],

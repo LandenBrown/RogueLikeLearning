@@ -1,8 +1,8 @@
 {
   "name": "Bullet_Object",
   "spriteId": {
-    "name": "Sprite6",
-    "path": "sprites/Sprite6/Sprite6.yy",
+    "name": "BulletSprite",
+    "path": "sprites/BulletSprite/BulletSprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,
@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
   "tags": [],
