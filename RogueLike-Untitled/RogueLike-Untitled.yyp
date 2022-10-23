@@ -15,6 +15,7 @@
     {"id":{"name":"Bullet_Upgrade","path":"objects/Bullet_Upgrade/Bullet_Upgrade.yy",},"order":0,},
     {"id":{"name":"Bullet_Upgrade_Sprite","path":"sprites/Bullet_Upgrade_Sprite/Bullet_Upgrade_Sprite.yy",},"order":0,},
     {"id":{"name":"StageNumberCounterObject","path":"objects/StageNumberCounterObject/StageNumberCounterObject.yy",},"order":7,},
+    {"id":{"name":"Monkey17","path":"sprites/Monkey17/Monkey17.yy",},"order":3,},
     {"id":{"name":"SilverCoinSprite","path":"sprites/SilverCoinSprite/SilverCoinSprite.yy",},"order":1,},
     {"id":{"name":"Monkey_Damage","path":"sprites/Monkey_Damage/Monkey_Damage.yy",},"order":1,},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},"order":0,},
