@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-sprite_index = Monkey;
 
 if global.Player_Health > .0001 {
 	   if (collision_line(x,y,Player.x,Player.y,Fire,true,true) = noone) {

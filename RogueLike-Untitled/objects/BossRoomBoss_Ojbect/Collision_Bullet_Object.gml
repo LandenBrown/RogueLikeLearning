@@ -6,6 +6,6 @@
 if damage_delay < 0{
 	monsterHealth -= global.Bullet_Damage;
 	damage_delay = 5;
-	sprite_index = Monkey_Damage;
+	//sprite_index = Monkey_Damage;
 }
 

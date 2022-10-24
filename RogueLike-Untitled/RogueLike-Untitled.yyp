@@ -24,6 +24,7 @@
     {"id":{"name":"Monkey_Damage","path":"sprites/Monkey_Damage/Monkey_Damage.yy",},"order":1,},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},"order":0,},
     {"id":{"name":"SilverCoinDisplay","path":"objects/SilverCoinDisplay/SilverCoinDisplay.yy",},"order":2,},
+    {"id":{"name":"StandardRoomSprite","path":"sprites/StandardRoomSprite/StandardRoomSprite.yy",},"order":1,},
     {"id":{"name":"PlayGameButtonSprite","path":"sprites/PlayGameButtonSprite/PlayGameButtonSprite.yy",},"order":0,},
     {"id":{"name":"Object3","path":"objects/Object3/Object3.yy",},"order":2,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
