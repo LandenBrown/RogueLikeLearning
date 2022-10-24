@@ -72,6 +72,10 @@ instance_create_depth(random_xp, random_yp, 0, Player);
 //}
 
 
+//Create particle system
+global.partSystem = part_system_create();
+part_system_depth(global.partSystem, -100);
+
 function check_Stage(){
 	randomise();
 	if global.currentStage = 5 {
@@ -81,7 +85,7 @@ function check_Stage(){
 		layer_background_sprite(back_id, GalaxySnailRoomSprite);
 	}
 	else{
-		global.currentMonsterArray = global.Unique_Room_Monster_Array;
+		global.currentMonsterArray = global.spawnable_Monster_Array;
 		var lay_id = layer_get_id("Background");
 		var back_id = layer_background_get_id(lay_id);
 		layer_background_sprite(back_id, StandardRoomSprite);
