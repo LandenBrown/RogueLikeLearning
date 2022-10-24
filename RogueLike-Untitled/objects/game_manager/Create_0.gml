@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Initial Difficulties
-global.total_enemies = 3;
+global.total_enemies = 1;
 global.spawn_monster_count = global.total_enemies;
 global.monsters_left = global.spawn_monster_count;
 global.difficulty_modifier = 1;
@@ -35,6 +35,10 @@ global.needsSpawn = false;
 
 //Enemy Projectile Damage
 global.Rock_Damage = 3;
+global.PhaseDisc_Damage = 5; 
+
+
+//Currency Drops
 global.SilverCoins = 0;
 global.GoldCoins = 0;
 
@@ -81,7 +85,7 @@ part_system_depth(global.partSystem, -100);
 
 function check_Stage(){
 	randomise();
-	if global.currentStage = 5 {
+	if global.currentStage == 5 and global.InBossStage == false {
 		global.currentMonsterArray = global.Boss_Room_Monster_Array;
 		var lay_id = layer_get_id("Background");
 		var back_id = layer_background_get_id(lay_id);
@@ -89,12 +93,21 @@ function check_Stage(){
 		global.bossStage = true;
 		global.bossStageName = "First Boss";
 	}
+	else if global.currentStage == 10 and global.InBossStage == false {
+		global.currentMonsterArray = global.Boss_Room_Monster_Array;
+		var lay_id = layer_get_id("Background");
+		var back_id = layer_background_get_id(lay_id);
+		layer_background_sprite(back_id, GalaxySnailRoomSprite);
+		global.bossStage = true;
+		global.bossStageName = "Second Boss";
+	}
 	else{
 		global.currentMonsterArray = global.spawnable_Monster_Array;
 		var lay_id = layer_get_id("Background");
 		var back_id = layer_background_get_id(lay_id);
 		layer_background_sprite(back_id, StandardRoomSprite);
 		global.bossStage = false;
+		global.InBossStage = false;
 		//Test gitpushasd
 	}
 	
@@ -148,6 +161,14 @@ function check_spawn_monsters() {
 			instance_create_depth(center_x, center_y, 0, BossRoomBoss_Ojbect);
 			global.InBossStage = true;
 			global.monsters_left = 1;
+			
+		}
+		else if global.bossStageName == "Second Boss" {
+			center_x = (room_width/2);
+			center_y = (room_height/2);
+			instance_create_depth(center_x, center_y, 0, SecondBossRoomBoss_Object);
+			global.InBossStage = true;
+		
 		}
 	} 
 	else if global.spawn_monster_count != 0 and global.InBossStage == false {

@@ -17,13 +17,14 @@ if monsterHealth <= 0 {
 	global.InBossStage = false;
 	global.monsters_left -= 1;
 	global.GoldCoins += 1;
-	
 	chance = random_range(1,100);
 	if chance <= 10{
 		instance_create_depth(x, y, 0, Bullet_Upgrade);
 	}
 	instance_create_depth(x, y, 0, obj_OrangeBlock_Dead);
+	
 	instance_destroy();
+	
 	
 
 }

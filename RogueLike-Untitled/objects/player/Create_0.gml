@@ -1,6 +1,6 @@
-global.Player_Health = 100;
+global.Player_Health = 1000;
 
-global.Player_Max_Health = 100;
+global.Player_Max_Health = 1000;
 
 global.Taking_Damage = false; 
 
