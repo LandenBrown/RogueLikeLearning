@@ -39,8 +39,8 @@ part_type_step(global.ptBasic, 1, global.ptTrail);
 
 var _p = part_type_create();
 part_type_shape(_p, pt_shape_flare);
-part_type_life(_p, 5, 5);
-part_type_scale(_p, 1, 1);
+part_type_life(_p, 5, 7);
+part_type_scale(_p, 1.5, 1.5);
 part_type_alpha2(_p, 1, 0);
 part_type_color2(_p, c_blue, c_white);
 

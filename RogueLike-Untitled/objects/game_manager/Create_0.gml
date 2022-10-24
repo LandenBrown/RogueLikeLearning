@@ -168,6 +168,7 @@ function check_spawn_monsters() {
 			center_y = (room_height/2);
 			instance_create_depth(center_x, center_y, 0, SecondBossRoomBoss_Object);
 			global.InBossStage = true;
+			global.monsters_left = 1;
 		
 		}
 	} 
