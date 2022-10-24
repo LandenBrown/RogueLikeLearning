@@ -22,7 +22,8 @@ if monsterHealth <= 0 {
 	instance_create_depth(x, y, 0, obj_OrangeBlock_Dead);
 	instance_destroy();
 	global.monsters_left -= 1;
-	global.SilverCoins += 1;
+	global.GoldCoins += 1;
+	global.InBossStage = false;
 	
 
 }

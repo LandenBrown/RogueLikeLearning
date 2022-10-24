@@ -8,6 +8,9 @@ global.difficulty_modifier = 1;
 global.currentStage = 1;
 global.maxStage = 1;
 global.monster_limit = 15;
+global.bossStage = false;
+global.bossStageName = "";
+global.InBossStage = false;
 
 
 //Room Management
@@ -83,12 +86,15 @@ function check_Stage(){
 		var lay_id = layer_get_id("Background");
 		var back_id = layer_background_get_id(lay_id);
 		layer_background_sprite(back_id, GalaxySnailRoomSprite);
+		global.bossStage = true;
+		global.bossStageName = "First Boss";
 	}
 	else{
 		global.currentMonsterArray = global.spawnable_Monster_Array;
 		var lay_id = layer_get_id("Background");
 		var back_id = layer_background_get_id(lay_id);
 		layer_background_sprite(back_id, StandardRoomSprite);
+		global.bossStage = false;
 	}
 	
 }
@@ -126,7 +132,7 @@ function check_remaining_monsters() {
 		if global.currentStage > global.maxStage {
 			global.maxStage = global.currentStage;
 		}
-		check_Stage();
+	check_Stage();
 		//nextRoom = check_Room(global.unique_Rooms_Array);
 		//room_goto(nextRoom);
 	}
@@ -134,7 +140,16 @@ function check_remaining_monsters() {
 
 function check_spawn_monsters() {
 	
-	if global.spawn_monster_count != 0{
+	if global.bossStage == true and global.InBossStage == false{
+		if global.bossStageName == "First Boss" {
+			center_x = (room_width/2);
+			center_y = (room_height/2);
+			instance_create_depth(center_x, center_y, 0, BossRoomBoss_Ojbect);
+			global.InBossStage = true;
+			global.monsters_left = 1;
+		}
+	} 
+	else if global.spawn_monster_count != 0 and global.InBossStage == false {
 		//if global.needsSpawn != true {
 		//	Room = check_Room(global.unique_Rooms_Array);
 		//	room_goto(Room);
