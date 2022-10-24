@@ -46,6 +46,34 @@ part_type_color2(_p, c_blue, c_white);
 
 global.sbParticle = _p;
 
+var _p = part_type_create();
+part_type_shape(_p, pt_shape_circle);
+part_type_speed(_p, 4, 5, .1,0);
+part_type_direction(_p, 0, 360, 0, 10);
+part_type_life(_p, 120, 120);
+part_type_alpha2(_p, 1, 0);
+part_type_color2(_p, c_white, c_blue);
+part_type_size(_p, .4, .4, -.02, 0);
+
+global.sbTrail = _p;
+
+part_type_step(global.sbParticle, 1, global.sbTrail);
+
+//Particle death effects
+
+var _p = part_type_create();
+part_type_shape(_p, pt_shape_cloud);
+part_type_speed(_p, 4, 5, .1,0);
+part_type_direction(_p, 0, 360, 0, 10);
+part_type_life(_p, 120, 120);
+part_type_alpha2(_p, 1, 0);
+part_type_color2(_p, c_blue, c_white);
+part_type_size(_p, .4, .4, -.02, 0);
+
+global.sbTrail_Death = _p;
+
+// Set as Death
+part_type_death(global.sbParticle, 1, global.sbTrail_Death);
 
 
 #endregion
