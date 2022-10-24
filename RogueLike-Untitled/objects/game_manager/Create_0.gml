@@ -95,6 +95,7 @@ function check_Stage(){
 		var back_id = layer_background_get_id(lay_id);
 		layer_background_sprite(back_id, StandardRoomSprite);
 		global.bossStage = false;
+		//Test gitpush
 	}
 	
 }
