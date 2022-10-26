@@ -29,5 +29,5 @@ if monsterHealth <= 0 {
 
 }
 
-damage_delay -= 1;
+//damage_delay -= 1;
 

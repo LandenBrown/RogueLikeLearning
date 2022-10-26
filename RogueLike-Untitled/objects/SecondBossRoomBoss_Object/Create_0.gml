@@ -7,4 +7,4 @@ monsterMaxHealth = 75;
 monsterSpeed = .1;
 monsterid = id;
 
-damage_delay = 5;
+damage_delay = 0;
