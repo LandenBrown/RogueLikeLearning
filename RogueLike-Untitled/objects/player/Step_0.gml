@@ -50,7 +50,7 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0){
 
 
 
-if global.Player_Health <= 0{
+if Player_Health <= 0{
 	SaveGame();
 	instance_destroy();
 	//game_end();
@@ -58,8 +58,8 @@ if global.Player_Health <= 0{
 };
 
 
-if global.Taking_Damage == true {
+if Taking_Damage == true {
 	
 	instance_create_depth(x, y, 0, Taking_Damage_Object);
-	global.Taking_Damage = false;
+	Taking_Damage = false;
 }

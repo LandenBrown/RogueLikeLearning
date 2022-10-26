@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if global.Player_Health > .0001 {
+if Player.Player_Health > .0001 {
 	   if (collision_line(x,y,Player.x,Player.y,Fire,true,true) = noone) {
 	        direction=point_direction(x,y,Player.x,Player.y);
 	        speed= monsterSpeed;

@@ -1,8 +1,8 @@
-global.Player_Health = 1000;
+Player_Health = 1000;
 
-global.Player_Max_Health = 1000;
+Player_Max_Health = 1000;
 
-global.Taking_Damage = false; 
+Taking_Damage = false; 
 
 firingdelay = 0;
 
