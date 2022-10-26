@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-monsterHealth = 150;
-monsterMaxHealth = 150;
+monsterHealth = 75;
+monsterMaxHealth = 75;
 monsterSpeed = .1;
 monsterid = id;
 

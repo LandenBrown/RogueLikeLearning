@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Initial Difficulties
-global.total_enemies = 1;
+global.total_enemies = 30;
 global.spawn_monster_count = global.total_enemies;
 global.monsters_left = global.spawn_monster_count;
 global.difficulty_modifier = 1;
@@ -19,7 +19,7 @@ global.currentRoom = Room1;
 global.unique_Rooms_Array = [Room1, UniqueRoom, BossRoom];
 
 //Room Enemies
-global.spawnable_Monster_Array = [Fire, MonkeyObject];
+global.spawnable_Monster_Array = [Fire];//removed MonkeyObject for testing
 global.Unique_Room_Monster_Array = [MonkeyObject];
 global.Boss_Room_Monster_Array = [BossRoomBoss_Ojbect];
 

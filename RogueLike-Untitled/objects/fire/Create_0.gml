@@ -4,7 +4,7 @@
 
 monsterHealth = 5;
 monsterMaxHealth = 5;
-monsterSpeed = 1;
+monsterSpeed = .6;
 
 monsterid = id;
 
