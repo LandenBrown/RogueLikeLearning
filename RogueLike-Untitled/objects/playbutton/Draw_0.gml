@@ -4,5 +4,5 @@ draw_sprite(PlayGameButtonSprite, 0, x,y);
 
 
 
-draw_text_ext(x,y, "Press Space", 15, 150)
+draw_text_ext(x,y, "Press 1 to play as Destin. Press 2 to play as Mearch.", 15, 150)
 

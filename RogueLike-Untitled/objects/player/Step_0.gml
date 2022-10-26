@@ -18,7 +18,7 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0){
 	firingdelay = 5;
 	//Applies to object not player
 	global.attacks_count += 1;
-	if currentWeapon == "bullet"{
+	if PrimaryWeapon == "bullet"{
 		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;
@@ -26,7 +26,7 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0){
 			image_angle = direction;
 		};
 	};
-	if currentWeapon == "tri-bullet"{
+	if PrimaryWeapon == "tri-bullet"{
 		with(instance_create_depth(x,y, 0, Bullet_Object))
 		{
 			speed = 25;

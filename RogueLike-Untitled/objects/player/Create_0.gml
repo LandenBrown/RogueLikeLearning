@@ -6,10 +6,27 @@ Taking_Damage = false;
 
 firingdelay = 0;
 
+characterSpriteIndex = "";
+characterDamageSpriteIndex = "";
+
 global.attacks_count = 0;
 
+PrimaryWeapon = "";
 
-currentWeapon = "tri-bullet";
+
+//Assigning character sprite indexs 
+if global.CharacterChoice == "Destin" {
+	characterSpriteIndex = DestinCharacterSprite;
+	characterDamageSpriteIndex = DestinTakingDamage;
+	PrimaryWeapon = "bullet";
+}
+else if global.CharacterChoice == "Mearch" {
+	characterSpriteIndex = MearchCharacterSprite;
+	characterDamageSpriteIndex = MearchTakingDamage;
+	PrimaryWeapon = "tri-bullet";
+}
+
+sprite_index = characterSpriteIndex;
 
 
 function SaveGame() {

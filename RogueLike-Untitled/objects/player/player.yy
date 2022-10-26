@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Player",
   "spriteId": {
-    "name": "Sprite2",
-    "path": "sprites/Sprite2/Sprite2.yy",
+    "name": "DestinCharacterSprite",
+    "path": "sprites/DestinCharacterSprite/DestinCharacterSprite.yy",
   },
   "solid": false,
   "visible": true,
