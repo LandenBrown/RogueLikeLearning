@@ -5,10 +5,10 @@
 
 global.PlayerX = x;
 global.PlayerY = y;
-if(keyboard_check(vk_left)){x -= 3};
-if(keyboard_check(vk_right)){x += 3};
-if(keyboard_check(vk_up)){y -= 3};
-if(keyboard_check(vk_down)){y += 3};
+if(keyboard_check(ord("A"))){x -= 3};
+if(keyboard_check(ord("D"))){x += 3};
+if(keyboard_check(ord("W"))){y -= 3};
+if(keyboard_check(ord("S"))){y += 3};
 
 //Point direction
 

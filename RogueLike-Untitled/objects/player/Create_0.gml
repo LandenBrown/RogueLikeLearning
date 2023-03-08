@@ -5,6 +5,7 @@ Player_Max_Health = 1000;
 Taking_Damage = false; 
 
 firingdelay = 0;
+defensive_firingdelay = 15;
 
 characterSpriteIndex = "";
 characterDamageSpriteIndex = "";
@@ -76,6 +77,23 @@ function fire_Primary() {
 		};
 	};
 	};
+	
+	
+function fire_Secondary() {
+	image_angle = point_direction(x,y,mouse_x,mouse_y);
+	defensive_firingdelay = 15;
+	//Applies to object not player
+	//global.attacks_count += 1;
+	if PrimaryWeapon == "bullet"{
+		with(instance_create_depth(x,y, 0, Bullet_Object))
+		{
+			speed = 25;
+			direction = other.image_angle;
+			image_angle = direction;
+		};
+	};
+	
+};
 
 
 function SaveGame() {
